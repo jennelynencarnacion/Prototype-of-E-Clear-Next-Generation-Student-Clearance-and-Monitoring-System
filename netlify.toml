@@ -1,4 +1,21 @@
+[build]
+  command = "npm run build" # Command to build the front end
+  publish = "frontend/build" # Directory to publish
+
+[dev]
+  command = "npm start" # Command to start the development server
+  targetPort = 3000 # Port used by the development server
+
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  directory = "backend/netlify/functions" # Directory for Netlify functions
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
