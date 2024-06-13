@@ -1,0 +1,147 @@
+
+
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px;
+}
+
+/* App container to center content */
+.App {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Heading styling */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form styling */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px; 
+}
+
+/* Full-width input fields for form title and buttons */
+form > h2,
+form > button,
+form > p {
+  grid-column: span 2;
+}
+
+/* Input and select elements styling */
+input,
+select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styling */
+p {
+  color: red;
+  font-size: 14px;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .App {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  form {
+    grid-template-columns: 1fr; 
+  }
+
+  form > h2,
+  form > button,
+  form > p {
+    grid-column: span 1;
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .App {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  form {
+    grid-template-columns: 1fr; 
+  }
+
+  form > h2,
+  form > button,
+  form > p {
+    grid-column: span 1;
+  }
+}
